@@ -1,16 +1,27 @@
 # social_helper_app
 
-A new Flutter project.
+### Project Structure
 
-## Getting Started
+Here is how our project is organized. You will find the main source code in the `lib` folder, while platform-specific files are neatly tucked away in their own folders.
 
-This project is a starting point for a Flutter application.
+```text
+social_helper_app/
+├── android/            # Android-specific code and configuration
+├── ios/                # iOS-specific code and configuration
+├── lib/                # The heart of the app (Dart source code)
+│   ├── core/           # Shared helpers, routing, and theme settings
+│   └── features/       # Individual app features (like on-boarding)
+├── web/                # Web app assets and entry point
+├── windows/            # Windows desktop support
+├── macos/              # macOS desktop support
+├── linux/              # Linux desktop support
+├── test/               # Folder for your widget and unit tests
+├── pubspec.yaml        # Project dependencies and settings
+└── README.md           # You are reading this right now!
+```
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Key Directories:
+- **`lib/`**: This is where you will spend most of your time. 
+    - `core/`: Contains reusable logic like theme styles, navigation routes, and helper extensions.
+    - `features/`: Keeps your app organized by grouping code based on specific features, making it easier to scale as the app grows.
+- **`android/` & `ios/`**: These folders contain the native setup for mobile devices. You generally don't need to touch these unless you are configuring native permissions or icons.
